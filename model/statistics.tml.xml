@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<program xmlns="http://www.obidea.com/ns/termal#"
+   xmlns:tml="http://www.obidea.com/ns/termal#"
+   xmlns:rr="http://www.w3.org/ns/r2rml#">
+   <prefix tml:name="" tml:ns="http://data.worldbank.org/data-catalog/indodapoer#" />
+   <prefix tml:name="wbld" tml:ns="http://worldbank.270a.info/" />
+	
+   <uri-template tml:name="Statistics" tml:value="http://data.worldbank.org/data-catalog/indodapoer/stat/{1}#{2}" />
+
+   <mapping tml:id="Statistics">
+      <logical-table rr:tableName="statistics" />
+      <subject-map rr:class="Statistics" rr:template="Statistics(Region_Name_Code, Time_Value_Code)"/>
+      <predicate-object-map rr:predicate="GDIImportsRate" rr:column="NE.GDI.IMPT.CR"/>
+      <predicate-object-map rr:predicate="GDIExportsRate" rr:column="NE.GDI.EXPT.CR"/>
+      <predicate-object-map rr:predicate="GDPAgricultureRate" rr:column="NE.GDI.EXPT.CR"/>
+      <predicate-object-map rr:predicate="GDPMiningRate" rr:column="NE.GDI.EXPT.CR"/>
+      
+      <predicate-object-map rr:predicate="ExportCrudeMaterialsRate" rr:column="TRAD.EXPT.CRUD"/>
+      <predicate-object-map rr:predicate="ImportCrudeMaterialsRate" rr:column="TRAD.IMPT.CRUD"/>
+      <predicate-object-map rr:predicate="ExportOilFatWaxesRate" rr:column="TRAD.EXPT.OLFTW"/>
+      <predicate-object-map rr:predicate="ImportOilFatWaxesRate" rr:column="TRAD.IMPT.OLFTW"/>
+
+      <predicate-object-map rr:predicate="TotalEmployedRate" rr:column="SL.EMP.TOTL"/>
+      <predicate-object-map rr:predicate="TotalUnemployedRate" rr:column="SL.UEM.TOTL"/>
+      <predicate-object-map rr:predicate="EmploymentInAgricultureRate" rr:column="SL.EMP.AGR.FRST.FSH"/>
+      <predicate-object-map rr:predicate="EmploymentInConstructionRate" rr:column="SL.EMP.CNST"/>
+      <predicate-object-map rr:predicate="EmploymentInFinancialRate" rr:column="SL.EMP.FINS"/>
+      <predicate-object-map rr:predicate="EmploymentInIndustrialRate" rr:column="SL.EMP.IND"/>
+      
+      <predicate-object-map rr:predicate="year" rr:column="Time_Value"/>
+      <predicate-object-map rr:predicate="dataOrigin" rr:column="Region_Name"/>
+      <predicate-object-map rr:predicate="dataLevel" rr:column="Region_Type"/>
+   </mapping>
+</program>

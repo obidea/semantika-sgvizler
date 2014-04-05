@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://data.worldbank.org/data-catalog/indodapoer#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://data.worldbank.org/data-catalog/indodapoer#">
+    <Prefix name="" IRI="http://data.worldbank.org/data-catalog/indodapoer#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="wbld" IRI="http://worldbank.270a.info/"/>
+    <Declaration>
+        <Class IRI="EconomicIndicators"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FiscalIndicators"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Regions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Statistics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:AgricultureFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:BPKAudit_SubNationalBudget"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex1996"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex2002"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex2007"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Employment_Agriculture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Employment_Construction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Employment_Financial"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Employment_Mining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Export_BeverageTobacco"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Export_Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Export_CrudeMaterials"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Export_OilFatWaxes"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDI_Exports"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDI_Imports"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDI_Stock"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDP_Agriculture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDP_AgricultureConstant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDP_Mining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:GDP_MiningConstant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Import_BeverageTobacco"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Import_Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Import_CrudeMaterials"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:Import_OilFatWaxes"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:TotalEmployed"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:TotalUnderEmployed"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wbld:TotalUnemployed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="fromRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasIndicator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="EmploymentInAgricultureRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="EmploymentInConstructionRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="EmploymentInFinancialRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="EmploymentInIndustrialRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ExportCrudeMaterialsRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ExportOilFatWaxesRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="GDIExportsRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="GDIImportsRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="GDPAgricultureRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="GDPMiningRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ImportCrudeMaterialsRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ImportOilFatWaxesRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="TotalEmployedRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="TotalUnemployedRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dataLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dataOrigin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="regionCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="regionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="year"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="EconomicIndicators"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FiscalIndicators"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:AgricultureFunction"/>
+        <Class IRI="FiscalIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:BPKAudit_SubNationalBudget"/>
+        <Class IRI="FiscalIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex1996"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex2002"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:ConsumerPriceIndex2007"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Employment_Agriculture"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Employment_Construction"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Employment_Financial"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Employment_Mining"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Export_BeverageTobacco"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Export_Chemical"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Export_CrudeMaterials"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Export_OilFatWaxes"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDI_Exports"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDI_Imports"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDI_Stock"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDP_Agriculture"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDP_AgricultureConstant"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDP_Mining"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:GDP_MiningConstant"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Import_BeverageTobacco"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Import_Chemical"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Import_CrudeMaterials"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:Import_OilFatWaxes"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:TotalEmployed"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:TotalUnderEmployed"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wbld:TotalUnemployed"/>
+        <Class IRI="EconomicIndicators"/>
+    </SubClassOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="regionCode"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<program xmlns="http://www.obidea.com/ns/termal#"
+   xmlns:tml="http://www.obidea.com/ns/termal#"
+   xmlns:rr="http://www.w3.org/ns/r2rml#">
+   <prefix tml:name="" tml:ns="http://data.worldbank.org/data-catalog/indodapoer#" />
+	
+   <uri-template tml:name="Regions" tml:value="http://data.worldbank.org/data-catalog/indodapoer/region/{1}" />
+
+   <mapping tml:id="Statistics">
+      <logical-table rr:tableName="regions" />
+      <subject-map rr:class="Regions" rr:template="Regions(Region_Name_Code)"/>
+      <predicate-object-map rr:predicate="regionCode" rr:column="Region_Name_Code"/>
+      <predicate-object-map rr:predicate="regionName" rr:column="Region_Name"/>
+      <predicate-object-map rr:predicate="url" rr:column="URL"/>
+   </mapping>
+</program>

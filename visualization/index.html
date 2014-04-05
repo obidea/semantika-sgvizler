@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>INDO-DAPOER Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" id="sgvzlr_script" src="js/sgvizler.js"></script>
+    <script type="text/javascript">
+    // Wait until page is ready to configure Sgvizler:
+    $(document).ready(
+        function (){
+            sgvizler
+                .defaultEndpointURL("http://localhost:8080/openrdf-sesame/repositories/indodapoer")
+                .defaultEndpointOutputFormat('json')
+                // Add prefixes used in examples:
+                .prefix('idd', 'http://data.worldbank.org/data-catalog/indodapoer#')
+                .prefix('wbld', 'http://worldbank.270a.info/')
+                .prefix('npdv', 'http://sws.ifi.uio.no/vocab/npd#')
+                .prefix('foaf', 'http://xmlns.com/foaf/0.1/')
+                .prefix('geo',  'http://www.w3.org/2003/01/geo/wgs84_pos#')
+                .prefix('dbp',  'http://dbpedia.org/resource/')
+                
+                 // Draw all sgvizler containers on page:
+                .containerDrawAll();
+        }
+    );
+    /* Trac 0.11 uses an old version of jQuery. Sgvizler requires a newer
+       version. We re-introduce some old jQuery functions used by Trac but
+       not in the new version: 
+       - loadStylesheet 
+    */
+    jQuery.extend(
+        {
+            loadStyleSheet: function(file, type) {
+                $('<link>').attr('rel', 'stylesheet')
+                    .attr('type', type)
+                    .attr('href', file)
+                    .appendTo('head');
+            }
+        }
+    );
+   </script>
+   </head>
+
+   <body>
+     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+       <div class="container">
+         <div class="navbar-header">
+           <a class="navbar-brand" href="#"><span style="color:white;">INDO-DAPOER Visualization</span></a>
+         </div>
+         <div class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="https://github.com/obidea/semantika-sgvizler">About</a></li>
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div>
+     </div>
+
+    <div class="container">
+      <div class="starter-template">
+	    <h1>Indonesian Economic Indicators in Motion (1990-2010)</h1>
+	    <div class="chart-border">
+	    <div id="indodaper-statistics"
+           data-sgvizler-query=
+             "SELECT ?region ?year 
+             		 ?GDI_Imports_Rate
+		             ?GDI_Exports_Rate
+		             ?GDP_Agriculture_Rate
+		             ?GDP_Mining_Rate
+		             ?Export_CrudeMaterials_Rate
+		             ?Import_CrudeMaterials_Rate
+		             ?Export_OilFatWaxes_Rate
+		             ?Import_OilFatWaxes_Rate
+		             ?Total_Employed_Rate
+		             ?Total_Unemployed_Rate
+		             ?Employment_InAgriculture_Rate
+		             ?Employment_InConstruction_Rate
+		             ?Employment_InFinancial_Rate
+		             ?Employment_InIndustrial_Rate
+		      WHERE {
+		        ?x a idd:Statistics;
+                   idd:year ?year;
+	               idd:GDIImportsRate ?GDI_Imports_Rate;
+	               idd:GDIExportsRate ?GDI_Exports_Rate;
+	               idd:GDPAgricultureRate ?GDP_Agriculture_Rate;
+	               idd:GDPMiningRate ?GDP_Mining_Rate;
+	               idd:ExportCrudeMaterialsRate ?Export_CrudeMaterials_Rate;
+	               idd:ImportCrudeMaterialsRate ?Import_CrudeMaterials_Rate;
+	               idd:ExportOilFatWaxesRate ?Export_OilFatWaxes_Rate;
+	               idd:ImportOilFatWaxesRate ?Import_OilFatWaxes_Rate;
+	               idd:TotalEmployedRate ?Total_Employed_Rate;
+	               idd:TotalUnemployedRate ?Total_Unemployed_Rate;
+	               idd:EmploymentInAgricultureRate ?Employment_InAgriculture_Rate;
+	               idd:EmploymentInConstructionRate ?Employment_InConstruction_Rate;
+	               idd:EmploymentInFinancialRate ?Employment_InFinancial_Rate;
+	               idd:EmploymentInIndustrialRate ?Employment_InIndustrial_Rate;
+	               idd:dataOrigin ?region;
+	               idd:dataLevel 'Provinces'
+	               FILTER (?year >= 1990 && ?year <= 2010)
+		      }"
+           data-sgvizler-chart="google.visualization.MotionChart">
+        </div><!-- #indodapoer-statistics -->
+        </div><!-- .squared -->
+        <p class="lead">This visualization is produced by teaming up <a href="http://obidea.github.io/semantika-api/">Semantika</a> + <a href="http://www.openrdf.org/">Sesame</a> + <a href="http://dev.data2000.no/sgvizler/wiki/Sgvizler">Sgvizler</a> + <a href="http://data.worldbank.org/data-catalog/indonesia-database-for-policy-and-economic-research">INDO-DAPOER</a></p>
+      </div><!-- .starter-template -->
+    </div><!-- .container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
