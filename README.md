@@ -9,7 +9,7 @@ In this project, I'm going to give you a tutorial how to create a motion chart u
 The tutorial will guide you to:
 
 1. Import data to MySQL,
-2. Setup a SPARQL endpoint,
+2. Setup SPARQL endpoint using Semantika+Sesame
 3. Deploy the data visualization page.
 
 
