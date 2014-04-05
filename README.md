@@ -34,13 +34,13 @@ semantika-sgvizler
 +- res (ignore this)
 ```
 
-## Import data to MySQL
+## Step 1: Import data to MySQL
 
 Prerequisite: [MySQL](http://www.mysql.com/) (tested version 5.x)
 
 [Please follow this link to import the necessary data to your local machine](https://github.com/obidea/semantika-sgvizler/tree/master/data). Make sure the MySQL server is running.
 
-## Setup SPARQL endpoint
+## Step 2: Setup SPARQL endpoint
 
 Prerequisite: [Apache Tomcat](http://tomcat.apache.org/) (tested version 7.0.50)
 
@@ -77,12 +77,12 @@ and so on.
 ![](https://raw.github.com/obidea/semantika-sgvizler/master/res/endpoint.png)
 
 
-## Deploy the data visualization page
+## Step 3: Deploy the data visualization page
 
 * Copy the whole content in `visualization` folder to `$CATALINA_HOME/webapps/indodapoer`
 * If you use a different endpoint address as in the example, you need to edit the `index.html` file and change the
 default endpoint URL.
-* Go to address `http://localhost:8080/indodapoer/` to see the visualization.
+* Go to address `http://localhost:8080/indodapoer/` to see the visualization and play with it.
 
 
 Questions?
