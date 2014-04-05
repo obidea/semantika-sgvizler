@@ -8,13 +8,11 @@
       <data-source>
          <property name="connection.url">jdbc:mysql://localhost:3306/indodapoer</property>
          <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-         <property name="connection.username">semantika</property>
-         <property name="connection.password">semantika</property>
+         <property name="connection.username"></property>
+         <property name="connection.password"></property>
       </data-source>
-      <ontology-source resource="file:///Users/johardi/Documents/Projects/IndoDapoer/model/indodapoer.owl" />
-      <mapping-source resource="file:///Users/johardi/Documents/Projects/IndoDapoer/model/economic_indicators.tml.xml" />
-      <mapping-source resource="file:///Users/johardi/Documents/Projects/IndoDapoer/model/fiscal_indicators.tml.xml" />
-      <mapping-source resource="file:///Users/johardi/Documents/Projects/IndoDapoer/model/statistics.tml.xml" />
-      <mapping-source resource="file:///Users/johardi/Documents/Projects/IndoDapoer/model/regions.tml.xml" />
+      <ontology-source resource="indodapoer.owl" />
+      <mapping-source resource="/location/to/statistics.tml.xml" />
+      <mapping-source resource="/location/to/regions.tml.xml" />
    </application-factory>
 </semantika-configuration>
