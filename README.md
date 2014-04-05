@@ -1,7 +1,7 @@
 MotionChart in Sgvizler
 =======================
 
-NOTE: Not for public view yet! The project requires the upcoming Semantika 1.3 library
+**NOTE: Not for public view yet! The project requires the upcoming Semantika 1.3 library**
 
 In this project, I'm going to give you a tutorial how to create a motion chart using Sgvizler with Semantika backend.
 The tutorial will guide you to:
@@ -36,7 +36,7 @@ semantika-sgvizler
 
 Prerequisite: [MySQL](http://www.mysql.com/) (tested version 5.x)
 
-[Please follow this link to import the necessary data to your local machine](https://github.com/obidea/semantika-sgvizler/tree/master/data)
+[Please follow this link to import the necessary data to your local machine](https://github.com/obidea/semantika-sgvizler/tree/master/data). Make sure the MySQL server is running.
 
 ## Setup a SPARQL endpoint
 
