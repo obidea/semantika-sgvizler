@@ -21,15 +21,14 @@
     $(document).ready(
         function (){
             sgvizler
+                /*
+                 * Change the SPARQL endpoint URL here, if necessary
+                 */
                 .defaultEndpointURL("http://localhost:8080/openrdf-sesame/repositories/indodapoer")
                 .defaultEndpointOutputFormat('json')
                 // Add prefixes used in examples:
                 .prefix('idd', 'http://data.worldbank.org/data-catalog/indodapoer#')
                 .prefix('wbld', 'http://worldbank.270a.info/')
-                .prefix('npdv', 'http://sws.ifi.uio.no/vocab/npd#')
-                .prefix('foaf', 'http://xmlns.com/foaf/0.1/')
-                .prefix('geo',  'http://www.w3.org/2003/01/geo/wgs84_pos#')
-                .prefix('dbp',  'http://dbpedia.org/resource/')
                 
                  // Draw all sgvizler containers on page:
                 .containerDrawAll();
