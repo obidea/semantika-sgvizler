@@ -15,8 +15,8 @@ The tutorial will guide you to:
 
 ## Preparation
 
-[Download and unzip the content of this project to your local machine](https://github.com/obidea/semantika-sgvizler/archive/master.zip).
-It has a file structure as follows.
+[Download and unzip the content of this project to your local project directory](https://github.com/obidea/semantika-sgvizler/archive/master.zip).
+The project has a file structure as follows.
 ```
 semantika-sgvizler
 +- data
