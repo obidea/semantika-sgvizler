@@ -1,7 +1,7 @@
 MotionChart in Sgvizler
 =======================
 
-**NOTE: Not for public view yet! The project requires the upcoming Semantika 1.3 library**
+**NOTE: Not for public viewing yet! The project requires the upcoming Semantika 1.3 library**
 
 ![](https://raw.github.com/obidea/semantika-sgvizler/master/res/motion-chart.png)
 
