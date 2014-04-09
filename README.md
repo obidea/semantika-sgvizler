@@ -42,9 +42,9 @@ Prerequisite: [MySQL](http://www.mysql.com/) (tested version 5.x)
 
 Prerequisite: [Apache Tomcat](http://tomcat.apache.org/) (tested version 7.0.50)
 
-* Download [semantika-sesame](https://github.com/obidea/semantika-sesame/releases) bundle (build 13+)
-* Unzip the bundle and deploy the WAR files to `$CATALINA_HOME/webapps/` where `$CATALINA_HOME` represents the location
-directory of your Tomcat installation. In UNIX, the usual location is `/usr/share/tomcat7`
+* Download the endpoint bundle from [Semantika Sesame](https://github.com/obidea/semantika-sesame/releases) project (build 13+)
+* Unzip it and deploy the WAR files to `$CATALINA_HOME/webapps/` where `$CATALINA_HOME` represents the location
+directory of your Tomcat installation. In UNIX, the usual location is "/usr/share/tomcat7"
 * Enable the CORS (Cross-Origin Resource Sharing) filter in Tomcat. To do that you must edit the
 `$CATALINA_HOME/conf/web.xml` by adding these lines (as [suggested by this page](http://enable-cors.org/server_tomcat.html)).
 ```
