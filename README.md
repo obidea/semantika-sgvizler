@@ -13,8 +13,7 @@ The tutorial will guide you to:
 
 ## Preparation
 
-[Download and unzip the content of this project to your local project directory](https://github.com/obidea/semantika-sgvizler/archive/master.zip) at `$PROJECT_HOME`.
-The project has a file structure as follows.
+[Download and unzip the content of this project](https://github.com/obidea/semantika-sgvizler/archive/master.zip) to `$PROJECT_HOME`, where the variable represents the location of your local project directory. The project has a file structure as follows.
 ```
 semantika-sgvizler/
 +- data/
