@@ -1,8 +1,6 @@
 MotionChart in Sgvizler
 =======================
 
-**NOTE: Not for public viewing yet! The project requires the upcoming Semantika 1.3 library**
-
 ![](https://raw.github.com/obidea/semantika-sgvizler/master/res/motion-chart.png)
 
 In this project, I'm going to give you a tutorial how to create a motion chart using Sgvizler with Semantika backend.
@@ -81,7 +79,7 @@ are at `/home/project/indodapoer/model` then complete the location to `file:///h
 * Copy the whole content in `$PROJECT_HOME/visualization/` to `$CATALINA_HOME/webapps/indodapoer`.
 * If you use a different endpoint address as in the example, you need to edit the `index.html` and change the
 default endpoint URL.
-* Go to address `http://localhost:8080/indodapoer/` to see the visualization and play with it.
+* Go to address `http://localhost:8080/indodapoer/` to see the visualization and get play with it.
 
 
 Questions?
