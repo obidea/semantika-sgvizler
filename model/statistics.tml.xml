@@ -12,8 +12,8 @@
       <subject-map rr:class="Statistics" rr:template="Statistics(Region_Name_Code, Time_Value_Code)"/>
       <predicate-object-map rr:predicate="GDIImportsRate" rr:column="NE.GDI.IMPT.CR"/>
       <predicate-object-map rr:predicate="GDIExportsRate" rr:column="NE.GDI.EXPT.CR"/>
-      <predicate-object-map rr:predicate="GDPAgricultureRate" rr:column="NE.GDI.EXPT.CR"/>
-      <predicate-object-map rr:predicate="GDPMiningRate" rr:column="NE.GDI.EXPT.CR"/>
+      <predicate-object-map rr:predicate="GDPAgricultureRate" rr:column="NA.GDP.AGR.CR"/>
+      <predicate-object-map rr:predicate="GDPMiningRate" rr:column="NA.GDP.MINQ.CR"/>
       
       <predicate-object-map rr:predicate="ExportCrudeMaterialsRate" rr:column="TRAD.EXPT.CRUD"/>
       <predicate-object-map rr:predicate="ImportCrudeMaterialsRate" rr:column="TRAD.IMPT.CRUD"/>
@@ -30,5 +30,22 @@
       <predicate-object-map rr:predicate="year" rr:column="Time_Value"/>
       <predicate-object-map rr:predicate="dataOrigin" rr:column="Region_Name"/>
       <predicate-object-map rr:predicate="dataLevel" rr:column="Region_Type"/>
+   </mapping>
+   <mapping tml:id="Ratios">
+      <logical-table>
+      <![CDATA[
+      select Region_Name_Code, Time_Value_Code,
+             (`SL.UEM.TOTL` / (`SL.UEM.TOTL` + `SL.EMP.TOTL`)) as UnemploymentRatio,
+             (`SL.EMP.TOTL` / (`SL.UEM.TOTL` + `SL.EMP.TOTL`)) as EmploymentRatio,
+             (`NE.GDI.EXPT.CR` / `NE.GDI.IMPT.CR`) as GDITradeRatio,
+             (`TRAD.EXPT.CRUD` / `TRAD.IMPT.CRUD`) as CrudeMaterialTradeRatio
+      from statistics
+      ]]>
+      </logical-table>
+      <subject-map rr:class="Statistics" rr:template="Statistics(Region_Name_Code, Time_Value_Code)"/>
+      <predicate-object-map rr:predicate="UnemploymentRatio" rr:column="UnemploymentRatio"/>
+      <predicate-object-map rr:predicate="EmploymentRatio" rr:column="EmploymentRatio"/>
+      <predicate-object-map rr:predicate="GDITradeRatio" rr:column="GDITradeRatio"/>
+      <predicate-object-map rr:predicate="CrudeMaterialTradeRatio" rr:column="CrudeMaterialTradeRatio"/>
    </mapping>
 </program>

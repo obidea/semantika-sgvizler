@@ -125,6 +125,9 @@
         <ObjectProperty IRI="hasIndicator"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="CrudeMaterialTradeRatio"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="EmploymentInAgricultureRate"/>
     </Declaration>
     <Declaration>
@@ -137,6 +140,9 @@
         <DataProperty IRI="EmploymentInIndustrialRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="EmploymentRatio"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="ExportCrudeMaterialsRate"/>
     </Declaration>
     <Declaration>
@@ -147,6 +153,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="GDIImportsRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="GDITradeRatio"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="GDPAgricultureRate"/>
@@ -165,6 +174,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="TotalUnemployedRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="UnemploymentRatio"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="dataLevel"/>
