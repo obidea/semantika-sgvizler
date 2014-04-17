@@ -68,46 +68,54 @@
 
     <div class="container">
       <div class="starter-template">
-	    <h1>Indonesian Economic Indicators in Motion (1990-2010)</h1>
-	    <div class="chart-border">
-	    <div id="indodaper-statistics"
+        <h1>Indonesian Economic Indicators in Motion (1990-2010)</h1>
+        <div class="chart-border">
+        <div id="indodaper-statistics"
            data-sgvizler-query=
              "SELECT ?region ?year 
-             		 ?GDI_Imports_Rate
-		             ?GDI_Exports_Rate
-		             ?GDP_Agriculture_Rate
-		             ?GDP_Mining_Rate
-		             ?Export_CrudeMaterials_Rate
-		             ?Import_CrudeMaterials_Rate
-		             ?Export_OilFatWaxes_Rate
-		             ?Import_OilFatWaxes_Rate
-		             ?Total_Employed_Rate
-		             ?Total_Unemployed_Rate
-		             ?Employment_InAgriculture_Rate
-		             ?Employment_InConstruction_Rate
-		             ?Employment_InFinancial_Rate
-		             ?Employment_InIndustrial_Rate
-		      WHERE {
-		        ?x a idd:Statistics;
+                   ?GDI_Imports_Rate
+                   ?GDI_Exports_Rate
+                   ?GDP_Agriculture_Rate
+                   ?GDP_Mining_Rate
+                   ?Export_CrudeMaterials_Rate
+                   ?Import_CrudeMaterials_Rate
+                   ?Export_OilFatWaxes_Rate
+                   ?Import_OilFatWaxes_Rate
+                   ?Total_Employed_Rate
+                   ?Total_Unemployed_Rate
+                   ?Employment_InAgriculture_Rate
+                   ?Employment_InConstruction_Rate
+                   ?Employment_InFinancial_Rate
+                   ?Employment_InIndustrial_Rate
+                   ?Unemployment_Ratio
+                   ?Employment_Ratio
+                   ?GDITrade_Ratio
+                   ?CrudeMaterialTrade_Ratio
+              WHERE {
+                ?x a idd:Statistics;
                    idd:year ?year;
-	               idd:GDIImportsRate ?GDI_Imports_Rate;
-	               idd:GDIExportsRate ?GDI_Exports_Rate;
-	               idd:GDPAgricultureRate ?GDP_Agriculture_Rate;
-	               idd:GDPMiningRate ?GDP_Mining_Rate;
-	               idd:ExportCrudeMaterialsRate ?Export_CrudeMaterials_Rate;
-	               idd:ImportCrudeMaterialsRate ?Import_CrudeMaterials_Rate;
-	               idd:ExportOilFatWaxesRate ?Export_OilFatWaxes_Rate;
-	               idd:ImportOilFatWaxesRate ?Import_OilFatWaxes_Rate;
-	               idd:TotalEmployedRate ?Total_Employed_Rate;
-	               idd:TotalUnemployedRate ?Total_Unemployed_Rate;
-	               idd:EmploymentInAgricultureRate ?Employment_InAgriculture_Rate;
-	               idd:EmploymentInConstructionRate ?Employment_InConstruction_Rate;
-	               idd:EmploymentInFinancialRate ?Employment_InFinancial_Rate;
-	               idd:EmploymentInIndustrialRate ?Employment_InIndustrial_Rate;
-	               idd:dataOrigin ?region;
-	               idd:dataLevel 'Provinces'
-	               FILTER (?year >= 1990 && ?year <= 2010)
-		      }"
+                   idd:GDIImportsRate ?GDI_Imports_Rate;
+                   idd:GDIExportsRate ?GDI_Exports_Rate;
+                   idd:GDPAgricultureRate ?GDP_Agriculture_Rate;
+                   idd:GDPMiningRate ?GDP_Mining_Rate;
+                   idd:ExportCrudeMaterialsRate ?Export_CrudeMaterials_Rate;
+                   idd:ImportCrudeMaterialsRate ?Import_CrudeMaterials_Rate;
+                   idd:ExportOilFatWaxesRate ?Export_OilFatWaxes_Rate;
+                   idd:ImportOilFatWaxesRate ?Import_OilFatWaxes_Rate;
+                   idd:TotalEmployedRate ?Total_Employed_Rate;
+                   idd:TotalUnemployedRate ?Total_Unemployed_Rate;
+                   idd:EmploymentInAgricultureRate ?Employment_InAgriculture_Rate;
+                   idd:EmploymentInConstructionRate ?Employment_InConstruction_Rate;
+                   idd:EmploymentInFinancialRate ?Employment_InFinancial_Rate;
+                   idd:EmploymentInIndustrialRate ?Employment_InIndustrial_Rate;
+                   idd:dataOrigin ?region;
+                   idd:dataLevel 'Provinces'
+                   OPTIONAL { ?x idd:UnemploymentRatio ?Unemployment_Ratio }
+                   OPTIONAL { ?x idd:EmploymentRatio ?Employment_Ratio }
+                   OPTIONAL { ?x idd:GDITradeRatio ?GDITrade_Ratio }
+                   OPTIONAL { ?x idd:CrudeMaterialTradeRatio ?CrudeMaterialTrade_Ratio }
+                   FILTER (?year >= 1990 && ?year <= 2010)
+              }"
            data-sgvizler-chart="google.visualization.MotionChart">
         </div><!-- #indodapoer-statistics -->
         </div><!-- .squared -->
